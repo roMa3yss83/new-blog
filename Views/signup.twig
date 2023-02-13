@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block special %}
+
+<div class="columns is-centered" style="margin-top: 10px;">
+    <div class="column is-6">
+        <div class="content">
+        <h3>Регистрация</h3>
+        </div>
+        <div class="box" style="margin: 5px;">
+            <form action="/blog-php/login" method="post">
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input" name="login" type="text" placeholder="Логин">
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control has-icons-left">
+                        <input class="input" name="password" type="password" placeholder="Пароль">
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <button class="button is-success">
+                        Зарегистрироваться
+                        </button>
+                    </p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

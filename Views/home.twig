@@ -1,0 +1,44 @@
+{% extends "base.twig" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block special %}
+{% endblock %}
+
+{% block content %}
+
+{% for i in 0..10 %}
+                <div class="box" style="margin: 20px;">
+                    <div class="columns">
+                        <div class="column is-3">
+                            <img 
+                            src="https://w-dog.ru/wallpapers/11/1/284849136899814/gory-nebo-leto-priroda.jpg" 
+                            alt="">
+                        </div>
+                        <div class="column is-9">
+                            Lorem ipsum dolor sit, amet consectetur 
+                            adipisicing elit. Eum corporis adipisci, rerum 
+                            illo optio pariatur doloremque debitis atque modi 
+                            impedit reiciendis esse, itaque, et tempore harum id blanditiis. 
+                            Porro, cum.
+                        </div>
+                    </div>
+                </div>
+{% endfor %}
+
+{% endblock %}
+
+{% block aside %}
+
+                <p class="menu-label">Категории</p>
+                <ul class="menu-list">
+                    <li><a>Что то такое</a></li>
+                    <li><a>Еще что то</a></li>
+                </ul>
+                <p class="menu-label">Популярные посты</p>
+                <ul class="menu-list">
+                    <li><a>Крутой пост</a></li>
+                    <li><a>Мего крутой пост</a></li>
+                </ul>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="public/css/footer.css">
+    <script src="public/js/jquery.js"></script>
+    <link rel="stylesheet" href="public/css/create-post.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="">
+                <img src="public/img/logo.png" style="margin-left: 10px;" height="28">
+            </a>
+      
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/newBlog/">
+                    Главная
+                </a>
+      
+                <a class="navbar-item"  href="https://github.com/roMa3yss83">
+                    Github
+                </a>
+
+                <a class="navbar-item">
+                            Все статьи
+                        </a>
+                        <a class="navbar-item">
+                            Категории
+                        </a>
+            </div>
+        </div>
+    </nav>
+
+    {% block special %}{% endblock %}
+    
+    <div class="columns">
+        <div class="column is-9">
+            <main class="content">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+        <div class="column is-3">
+            <aside class="menu" style="margin: 10px;">
+                {% block aside %}{% endblock %}
+            </aside>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy;<span id="year"> </span><span> My blog.</span>
+    </div>
+
+    <script src="public/js/header.js"></script>
+    <script src="public/js/footer.js"></script>
+</body>
+</html>
